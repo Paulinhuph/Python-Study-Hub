@@ -1584,3 +1584,80 @@ def gerar_tabuada(numero_digitado):
 numero_digitado = int(input("Digite o Número para exibição das Tabuadas: "))
 # Chamada da função passando o valor digitado pelo usuário
 tabuadas = gerar_tabuada(numero_digitado)
+
+# Exc 88
+def verificador(senha_digitada):
+    if senha_digitada == "Smith":
+        return "Olá, Sr. Smith! É uma honra tê-lo de volta. Tenha um excelente dia!"
+    else:
+        return f"Bem-Vindo(a) ao nosso sistema!"
+
+senha_digitada = input("Digite a Senha: ")
+mensagem_final = verificador(senha_digitada)
+
+print("-" * 60)
+print(mensagem_final)
+print("-" * 60)
+
+
+# Exc 89 
+def verificador(numero):
+        # Função que recebe o número e retorna os números pares
+        numeros_pares = []
+        for n in range(0, numero + 1):  
+            if n % 2 == 0:
+                numeros_pares.append(n)
+        return numeros_pares         
+# Interação com o Usuário
+numero = int(input("Digite o Número: "))
+# Guarda o return da função em uma variável
+resultado = verificador(numero)
+# Exibição do Resultado
+print("-- Números Pares --")
+print("-" * 60)
+for item in resultado:
+    print("-" * 60)
+    print(item)
+    print("-" * 60)
+
+
+# Exc 90
+import time
+
+print("Iniciando contagem de 5 segundos...")
+for i in range(5, 0, -1):
+    time.sleep(1)
+    print(i) 
+    
+print("Contagem encerrada!")
+
+
+# Exc 91
+def escada(numero):
+    for i in range(1, numero + 1):
+        estrelas = i * "*"
+        print(f"{estrelas}\n")
+
+numero = int(input("Digite o Número para a Escada de Estrelas: "))
+escada(numero)
+
+
+# Exc 92
+def escada_invertida(numero):
+    for i in range(numero, 0, - 1):
+        estrelas = i * "*" 
+        print(f"{estrelas}\n")
+numero = int(input("Digite o Número para a Escada de Estrelas: "))
+escada_invertida(numero)
+
+
+# Exc 93 
+def lista():
+    list_car = ["Fusca", "Opala", "Gol Quadrado"]
+    return list_car[0]
+resultado = lista()
+print(resultado)
+
+
+# Exc 94
+
