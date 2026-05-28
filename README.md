@@ -6,6 +6,7 @@ Coleção de projetos desenvolvidos em Python com foco em lógica de programaç�
 
 Desenvolver habilidades em:
 
+- Lógica de Programação
 - Pensamento computacional e Resolução de problemas
 - Estruturação de código e **Arquitetura de APIs**
 - **Persistência de dados (SQL e NoSQL)**
@@ -29,27 +30,6 @@ Desenvolver habilidades em:
 
 - **Processamento de Dados**: Scripts para lidar com arquivos `.csv`, `.json` e `.txt`.
 - **Praticando.py**: Exercícios de leitura e escrita de fluxos de dados.
-
-### 📊 Análise de Dados e Performance
-
-- Analisador_de_Dados_da_BiuData_Solutions.py
-- Painel_de_Desempenho_da_Empresa.py
-
-### 👥 Sistemas Corporativos
-
-- Sistema_de_Acesso_Corporativo.py
-- Sistema_de_Avaliação_Corporativa_BiuAnalytics.py
-- Sistema_de_Feedback_Inteligente_BiuMind_Corp.py
-
-### 💰 Finanças e Negócios
-
-- Calculadora_de_Comissão.py | Calculadora_de_Bônus_Salarial.py
-- Sistema_de_Descontos_da_Loja_Inteligente.py | ConversorDolarReal.py
-
-### 🏥 Área da Saúde
-
-- **Monitoramento_Obstétrico_em_Python/**: Suite de ferramentas para saúde.
-- Contagem_Partos_Maternidade.py | Avaliação_de_Sinais_Vitais.py
 
 ### 👨‍💻 Exercícios de Lógica
 
