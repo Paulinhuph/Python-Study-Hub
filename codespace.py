@@ -1,8 +1,2 @@
-# ex093: Crie uma função que retorne o primeiro elemento de uma lista.
+# Local destinado para resolução dos exercicios. Após término, excluir e encaminhar para a pasta de resolução.
 
-def lista():
-    list_car = ["Fusca", "Opala", "Gol Quadrado"]
-    return list_car[0]
-
-resultado = lista()
-print(resultado)
