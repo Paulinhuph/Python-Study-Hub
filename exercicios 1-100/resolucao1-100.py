@@ -1660,4 +1660,107 @@ print(resultado)
 
 
 # Exc 94
+while True:
+    # Loop que recebe o input do usuário
+    print("--- Digite o Nome e a Idade ---")
+    nome = input("Digite Seu Nome: ")
+    idade = int(input("Digite a sua idade: "))
+    # Lógica de Condicionais
+    if idade < 3:
+        print(f"{nome}: Gratuito.")
+    elif 3 <= idade <= 12:
+        print(f"{nome}: R$ 10.00")
+    else: 
+        print(f"{nome}: R$ 15.00")
+    # Usuário deseja finalizar ou continuar adicionando
+    deseja_cadastrar = input("Deseja cadastrar mais alguma pessoa para compra?: (sim/não) ").lower().strip()
+    if deseja_cadastrar in ["n", "nao", "não"]:
+        break
 
+
+# Exc 95
+import random
+# Guarda o Número aleatório gerado
+vetor = []
+# Vai repetir a geração do Número e depois guarda-lô 7 vezes
+for i in range(7):
+    num_int = random.randint(0, 7)
+    vetor.append(num_int)
+# Percorre a lista e mostra número por número gerado
+for n in vetor:
+    print(n)
+
+
+# Exc 96
+def maior_palavra(texto_digitado):
+    palavras = texto_digitado.split() # Separa a String em uma lista de Palavras
+    maior = max(palavras, key=len) # Encontra a maior baseada no tamanho (Len)
+    return maior 
+# Captura o Texto Digitado pelo usuário
+texto_digitado = input("Digite uma Frase: ") 
+# Guarda a Variável Maior retornada pela função
+resultado = maior_palavra(texto_digitado)
+# Exibe ao Usuário a Maior Palavra encontrada
+print(f"A Maior Palavra Encontrada foi: {resultado}.")
+
+
+# Exc 97
+def conteudoarq(nome_do_arquivo):
+    try:
+        with open(nome_do_arquivo, "r") as arquivo:
+            conteudo = arquivo.read()
+            return conteudo
+    except FileNotFoundError:
+        return "Erro: Arquivo não encontrado!"
+nome_do_arquivo = input("Digite o Nome do Arquivo: ").strip()
+conteudo_salvo = conteudoarq(nome_do_arquivo)
+print(f"Conteúdo: {conteudo_salvo}")
+
+
+# Exc 98
+def sem_primeira_letra(string):
+    nova_string_formatada = string[1:]
+    return nova_string_formatada
+string = input("Digite uma Palavra para remover a primeira letra: ")
+resultado = sem_primeira_letra(string)
+print(f"Nova Palavra: {resultado}")
+
+# Exc 99
+def maior_numero(a, b):
+    maior = max(a, b) # Max(): Identifica o maior valor
+    return maior
+a = int(input("Digite o primeiro Número inteiro: "))
+b = int(input("Digite o Segundo Número inteiro: "))
+resultado = maior_numero(a, b)
+print(f"O Maior Número é: {resultado}")
+
+
+# Exc 100 
+from datetime import datetime 
+def calculo_idade(ano_nascimento):
+# Função Responsável por calcular a idade exata do Jovem
+    ano_atual = datetime.now().year # Guarda o Ano Atual
+    idade_do_jovem = ano_atual - ano_nascimento
+    return idade_do_jovem
+def calculo_alistamento(idade_do_jovem):
+# Função que realiza o cálculo do Alistamento
+    idade_alistamento = 18
+    # laços de Condicionais para devolver a mensagem correta
+    if idade_do_jovem < idade_alistamento:
+        faltam = idade_alistamento - idade_do_jovem
+        return f"Faltam: {faltam} anos para o seu Alistamento Militar."
+    
+    elif idade_do_jovem == idade_alistamento:
+        return "Chegou a Hora de se Alistar!"
+
+    else:
+        passaram =  idade_do_jovem - idade_alistamento 
+        return f"Passaram {passaram} anos do Alistamento Militar."
+    
+ano_nascimento = int(input("Digite o Ano de seu Nascimento (Ex:2004): "))
+# Função calculo_idade faz o cálculo, e devolve o resultado que será guardado na variável idade_final
+idade_final = calculo_idade(ano_nascimento) 
+# Passamos a variável externa para a próxima função: calculo_alistamento
+resultado = calculo_alistamento(idade_final) 
+# Exibição do Programa:
+print(resultado)
