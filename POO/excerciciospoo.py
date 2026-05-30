@@ -7,26 +7,78 @@ class Pessoa:
         self.idade = idade
         
 p1 = Pessoa("Paulo", 21)
-print(p1)
+print(f"Nome: {p1.nome}  idade: {p1.idade}")
+
 
 # ex002
 # Crie uma classe Livro com os atributos titulo, autor e paginas.
 # Adicione um método para exibir os detalhes do livro.
+class Livro:
+    def __init__(self, titulo, autor, paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.paginas = paginas
+
+    def __str__(self):
+        return f"Título: {self.titulo}, Autor: {self.autor}, Páginas: {self.paginas}"
+    
+p1 = Livro("O Estrangeiro.", "Albert Camus", 165)
+print(p1)
 
 
 # ex003
 # Crie uma classe Retangulo com os atributos largura e altura.
 # Adicione um método chamado calcular_area().
+class Retangulo:
+    def __init__(self, largura, altura):
+        self.largura = largura
+        self.altura = altura
+        
+    def calcular_area(self):
+        return self.largura * self.altura
+         
+p1 = Retangulo(20, 10)
+print(f"Área do Retângulo: {p1.calcular_area()}")
 
 
 # ex004
 # Crie uma classe Circulo com o atributo raio.
 # Adicione um método para calcular o perímetro.
+class Circulo:
+    def __init__(self, raio):
+        self.raio = raio
+
+    def calcular_perimetro(self):
+        return self.raio * (2 * 3.14)
+    
+p1 = Circulo(20)
+print(f"O Perímetro é: {p1.calcular_perimetro()}")
 
 
 # ex005
 # Crie uma classe ContaBancaria com os atributos titular e saldo.
 # Adicione métodos para depositar() e sacar().
+class ContaBancaria:
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.saldo = saldo
+
+    def depositar(self, valor_do_deposito):
+        self.saldo += valor_do_deposito
+
+    def sacar(self, valor_do_saque):
+        self.saldo -= valor_do_saque
+    
+# ---- Programa Principal ----
+
+minha_conta = ContaBancaria("Paulo", 2000)
+print(f"Saldo Inicial do {minha_conta.titular}: R$ {minha_conta.saldo}")
+
+minha_conta.depositar(50)
+print(f"Saldo Após depósito: R$ {minha_conta.saldo}")
+
+minha_conta.sacar(10)
+print(f"Saldo Após saque: R$ {minha_conta.saldo}")
 
 
 # ex006
