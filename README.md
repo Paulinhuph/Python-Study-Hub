@@ -35,6 +35,7 @@ Desenvolver habilidades em:
 
 - **1-100**: Resoluções e Enunciados
 - **101-200 / 201-300**: Em desenvolvimento.
+- **1-100**: Resoluções e Enunciado POO
 
 ## 🛠️ Tecnologias Utilizadas
 
