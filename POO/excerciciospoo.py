@@ -68,9 +68,7 @@ class ContaBancaria:
 
     def sacar(self, valor_do_saque):
         self.saldo -= valor_do_saque
-    
 # ---- Programa Principal ----
-
 minha_conta = ContaBancaria("Paulo", 2000)
 print(f"Saldo Inicial do {minha_conta.titular}: R$ {minha_conta.saldo}")
 
@@ -84,26 +82,108 @@ print(f"Saldo Após saque: R$ {minha_conta.saldo}")
 # ex006
 # Crie uma classe Carro com os atributos marca, modelo e velocidade_atual.
 # Adicione os métodos acelerar() e frear().
+class Carro:
+    def __init__(self, marca, modelo, velocidade_atual):
+        self.marca = marca
+        self.modelo = modelo
+        self.velocidade_atual = velocidade_atual
+
+    def acelerar(self, valor_aceleracao):
+        self.velocidade_atual += valor_aceleracao
+
+    def frear(self, valor_frenagem):
+        self.velocidade_atual -= valor_frenagem
+# --- Programa Principal ---
+meu_carro = Carro("Ford", "Ford Ka+", 120)
+print(f"Marca: {meu_carro.marca}, Modelo: {meu_carro.modelo}, Velocidade_Atual: {meu_carro.velocidade_atual}")
+
+meu_carro.acelerar(20)
+print(f"Velocidade atual após acelerar: {meu_carro.velocidade_atual}")
+
+meu_carro.frear(60)
+print(f"Velocidade atual após frear: {meu_carro.velocidade_atual}")
 
 
 # ex007
 # Crie uma classe Aluno com nome e uma lista de notas.
 # Adicione um método que calcule e retorne a média das notas.
+class Aluno:
+    def __init__(self, nome, notas):
+        self.nome = nome
+        self.notas = notas
+
+    def calculo_media(self):
+        return sum(self.notas) / len(self.notas) # Len conta quantos elemento existem na lista
+                                                 # Sum soma todos elementos da lista
+a1 = Aluno("Paulo Ricardo", [9, 8.5, 6.9, 8])
+print(f"Aluno: {a1.nome}, Média de Notas: {a1.calculo_media()}")
 
 
 # ex008
 # Crie uma classe Calculadora que possua métodos para somar, subtrair,
 # multiplicar e dividir dois números passados como argumento.
+class Calculadora:
+    def somar(self, n1, n2):
+        return n1 + n2
+    
+    def subtrair(self, n1, n2):
+        return n1 - n2
+    
+    def multiplicar(self, n1, n2):
+        return n1 * n2
+    
+    def dividir(self, n1 ,n2):
+        return n1 / n2
+
+minha_calculadora = Calculadora()
+print(f"Soma: {minha_calculadora.somar(60, 40)}")
+print(f"Subtração: {minha_calculadora.subtrair(60, 40)}")
+print(f"Multiplicação: {minha_calculadora.multiplicar(60, 40)}")
+print(f"Divisão: {minha_calculadora.dividir(60, 40)}")
 
 
 # ex009
 # Crie uma classe Produto com nome, preco e quantidade_estoque.
 # Adicione um método calcular_total_estoque().
+class Produto():
+    def __init__(self, nome, preco, quantidade_estoque):
+        self.nome = nome 
+        self.preco = preco
+        self.quantidade_estoque = quantidade_estoque
+
+    
+
+    def calcular_total_estoque(self):
+        return self.quantidade_estoque * self.preco 
+
+# --- Programa Principal ---
+total_estoque = Produto("Samsung Galaxy S25", 3000, 4)
+print(f"Produto: {total_estoque.nome} | Preço: {total_estoque.preco} | Estoque: {total_estoque.quantidade_estoque}")
+total_estoque.calcular_total_estoque()
+print(f"Valor Total do Estoque: R$ {total_estoque.calcular_total_estoque()}")
 
 
 # ex010
 # Crie uma classe Funcionario com nome, cargo e salario.
 # Adicione um método aumentar_salario(porcentagem).
+# ex010
+# Crie uma classe Funcionario com nome, cargo e salario.
+# Adicione um método aumentar_salario(porcentagem).
+class Funcionario: 
+    def __init__(self, nome, cargo, salario):
+        self.nome = nome 
+        self.cargo = cargo
+        self.salario = salario
+
+    def aumentar_salario(self, porcentagem):
+        calculo = (self.salario * porcentagem) / 100
+        self.salario += calculo
+        return self.salario
+# --- Programa Principal ---
+calculo_salario = Funcionario("Paulo", "T.I", 3500)
+print(f"Salário Atual: R$ {calculo_salario.salario}")
+
+print(f"Novo Salário: R$ {calculo_salario.aumentar_salario(0.5)}")
 
 
 # ex011
