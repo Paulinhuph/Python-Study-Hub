@@ -34,8 +34,12 @@ Desenvolver habilidades em:
 ### 👨‍💻 Exercícios de Lógica
 
 - **1-100**: Resoluções e Enunciados
-- **101-200 / 201-300**: Em desenvolvimento.
+- **101-200 / 201-300 / 301-400**: Em desenvolvimento.
 - **1-100**: Resoluções e Enunciado POO
+
+### 🦜 Estudos LangChain
+
+- **Estudos-Langchain/**: Projetos e práticas utilizando LangChain, LangGraph e LLMs (incluindo RAG e Chatbots).
 
 ## 🛠️ Tecnologias Utilizadas
 
