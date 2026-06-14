@@ -20,6 +20,10 @@ Desenvolver habilidades em:
 - **gerenciador_tarefas.py**: API para controle de produtividade.
 - **STYLESYNC-FLASK**: Sistema de gestão de E-commerce com Flask e MongoDB
 
+### ⚡ FastAPI & Integrações (MoniAI)
+
+- **MoniaiAPIFAST/**: API robusta para controle financeiro com assistente de IA. Implementa autenticação segura JWT validada localmente, integração com Supabase (PostgreSQL + RLS), e chat streaming em tempo real via SSE utilizando a API da Groq (LLM). Demonstra boas práticas de sanitização de erros e estrutura de endpoints.
+
 ### 🗄️ Banco de Dados (CRUD & Modelagem)
 
 - **Gerenciador_Escolar-BD/**: Sistema completo integrando modelos e esquemas.
@@ -44,8 +48,9 @@ Desenvolver habilidades em:
 ## 🛠️ Tecnologias Utilizadas
 
 - **Linguagem:** Python 3.x
-- **Web/API:** Flask, Blueprints, Pydantic
-- **Bancos de Dados:** SQLite (SQL), MongoDB (NoSQL)
+- **Web/API:** FastAPI, Flask, Blueprints, Pydantic
+- **Bancos de Dados:** PostgreSQL (Supabase), SQLite (SQL), MongoDB (NoSQL)
+- **IA / LLMs:** LangChain, Groq (Llama-3)
 - **Formatos de Dados:** JSON, CSV, TXT
 - **Ferramentas:** Git, GitHub, venv (Ambientes Virtuais)
 
